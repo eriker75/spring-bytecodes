@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap/bootstrap.bundle.min.js}"></script>
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hola spring</h1>
+    <nav>
+        <ul th:each="post : ${posts}">
+            <li>
+                <a th:text="${post.titulo}" href=""></a>
+                <p th:text="${post.description}"></p>
+                <p th:text="${post.fecha}"></p>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+<!-- 
+    TODO: Learning Thymeleaf notation
+
+    *th:href
+    !<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    *th:src
+    !<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    !<link rel="shortcut icon" href="#">
+    *th:each
+    !<ul th:each="post : ${posts}">
+    *th:text
+    !<a th:text="${post.titulo}" href=""></a>
+    !<p th:text="${post.description}"></p>
+
+
+
+-->
